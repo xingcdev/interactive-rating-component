@@ -1,0 +1,60 @@
+:root {
+	--ligh-grey: hsl(217, 12%, 63%);
+	--medium-grey: hsl(216, 12%, 54%);
+	--button-bg: hsla(216, 12%, 54%, 0.1);
+}
+
+*,
+:after,
+:before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 100%;
+}
+
+body {
+	font-size: 15px;
+	font-family: 'Overpass', sans-serif;
+	font-weight: 400;
+	height: 100vh;
+	background-color: hsl(216, 12%, 8%);
+	color: var(--medium-grey);
+}
+
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+p {
+	margin: 1rem 0;
+}
+
+.rating {
+	max-width: 330px;
+	padding: 1rem;
+	border-radius: 15px;
+	background: hsl(213, 19%, 18%);
+}
+
+.rating__star-icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	background-color: var(--button-bg);
+}
+
+.rating__title {
+	color: hsl(0, 0%, 100%);
+	font-weight: 700;
+	margin: 1rem 0;
+}
