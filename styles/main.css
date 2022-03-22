@@ -1,7 +1,8 @@
 :root {
+	--primary-color: hsl(25, 97%, 53%);
 	--ligh-grey: hsl(217, 12%, 63%);
 	--medium-grey: hsl(216, 12%, 54%);
-	--button-bg: hsla(216, 12%, 54%, 0.1);
+	--button-bg: hsla(216, 12%, 54%, 0.15);
 }
 
 *,
@@ -36,6 +37,12 @@ p {
 	margin: 1rem 0;
 }
 
+.center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .rating {
 	max-width: 330px;
 	padding: 1rem;
@@ -57,4 +64,21 @@ p {
 	color: hsl(0, 0%, 100%);
 	font-weight: 700;
 	margin: 1rem 0;
+}
+
+.rating__thank-you-state {
+	text-align: center;
+}
+
+.rating__thank-you-img {
+	text-align: center;
+	margin: 1rem 0;
+}
+
+.rating__alert {
+	display: inline-block;
+	padding: 0.5rem 0.8rem;
+	border-radius: 30px;
+	color: var(--primary-color);
+	background: var(--button-bg);
 }

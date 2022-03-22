@@ -18,24 +18,72 @@
 	<body>
 		<main>
 			<section class="rating">
-				<section class="rating__star-icon">
-					<!-- before element doesn't work on img element because it has no text -->
-					<img src="images/icon-star.svg" alt="icon-star" />
-				</section>
+				<section class="rating__submiting-state">
+					<section class="rating__star-icon">
+						<img src="images/icon-star.svg" alt="icon-star" />
+					</section>
 
-				<h2 class="rating__title">How did we do?</h2>
-				<p>
-					Please let us know how we did with your support request. All feedback
-					is appreciated to help us improve our offerting!
-				</p>
-				<section class="rating__stars-button">
-					<button>1</button>
-					<button>2</button>
-					<button>3</button>
-					<button>4</button>
-					<button>5</button>
+					<h2 class="rating__title">How did we do?</h2>
+					<p>
+						Please let us know how we did with your support request. All
+						feedback is appreciated to help us improve our offerting!
+					</p>
+					<section class="rating__score-button">
+						<input
+							type="radio"
+							id="rating-score-1"
+							name="rating-score"
+							value="1"
+						/>
+						<label for="rating-score-1">1</label>
+
+						<input
+							type="radio"
+							id="rating-score-2"
+							name="rating-score"
+							value="2"
+						/>
+						<label for="rating-score-2">2</label>
+
+						<input
+							type="radio"
+							id="rating-score-3"
+							name="rating-score"
+							value="3"
+						/>
+						<label for="rating-score-3">3</label>
+
+						<input
+							type="radio"
+							id="rating-score-4"
+							name="rating-score"
+							value="4"
+						/>
+						<label for="rating-score-4">4</label>
+
+						<input
+							type="radio"
+							id="rating-score-5"
+							name="rating-score"
+							value="5"
+						/>
+						<label for="rating-score-5">5</label>
+					</section>
+					<button class="rating__submit-button">SUBMIT</button>
 				</section>
-				<button class="rating__button--submit">SUBMIT</button>
+				<section class="rating__thank-you-state" style="display: none">
+					<section class="rating__thank-you-img center">
+						<img src="images/thank-you.svg" alt="thank you" />
+					</section>
+					<p class="rating__alert">
+						You selected <span class="rating__rating-value">4</span> out of 5
+					</p>
+					<h2 class="rating__title">Thank you!</h2>
+					<p>
+						We appreciate you taking the time to give a rating, if you ever need
+						more support, don't hesitate to get in touch!
+					</p>
+				</section>
 			</section>
 		</main>
 	</body>
