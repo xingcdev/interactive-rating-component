@@ -3,6 +3,7 @@
 	--ligh-grey: hsl(217, 12%, 63%);
 	--medium-grey: hsl(216, 12%, 54%);
 	--button-bg: hsla(216, 12%, 54%, 0.15);
+	--white: hsl(0, 0%, 100%);
 }
 
 *,
@@ -64,6 +65,36 @@ p {
 	color: hsl(0, 0%, 100%);
 	font-weight: 700;
 	margin: 1rem 0;
+}
+
+.rating__score-button {
+	display: inline-block;
+	position: relative;
+	background: var(--button-bg);
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+
+	/* Center the label text */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.rating__score-button:hover {
+	background-color: var(--primary-color);
+	color: var(--white);
+	cursor: pointer;
+}
+
+input {
+	appearance: none;
+	position: absolute;
+}
+
+input:checked + .rating__score-button {
+	background-color: var(--medium-grey);
+	color: var(--white);
 }
 
 .rating__thank-you-state {
