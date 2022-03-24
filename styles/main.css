@@ -45,8 +45,8 @@ p {
 }
 
 .rating {
-	max-width: 330px;
-	padding: 1rem;
+	max-width: 350px;
+	padding: 1.5rem;
 	border-radius: 15px;
 	background: hsl(213, 19%, 18%);
 }
@@ -67,12 +67,19 @@ p {
 	margin: 1rem 0;
 }
 
+.rating__score-buttons {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 2rem 0 1.5rem 0;
+}
+
 .rating__score-button {
 	display: inline-block;
 	position: relative;
 	background: var(--button-bg);
-	width: 35px;
-	height: 35px;
+	width: 45px;
+	height: 45px;
 	border-radius: 50%;
 
 	/* Center the label text */
@@ -95,6 +102,22 @@ input {
 input:checked + .rating__score-button {
 	background-color: var(--medium-grey);
 	color: var(--white);
+}
+
+.rating__submit-button {
+	width: 100%;
+	color: var(--white);
+	background: var(--primary-color);
+	font-weight: 700;
+	padding: 0.8rem;
+	border-radius: 30px;
+	border: none;
+	cursor: pointer;
+}
+
+.rating__submit-button:hover {
+	background: var(--white);
+	color: var(--primary-color);
 }
 
 .rating__thank-you-state {
