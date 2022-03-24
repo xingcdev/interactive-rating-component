@@ -13,7 +13,7 @@
 			href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap"
 			rel="stylesheet"
 		/>
-		<title>Interactive Rating</title>
+		<title>Interactive Rating | Frontend mentor</title>
 	</head>
 	<body>
 		<main>
@@ -28,7 +28,7 @@
 						Please let us know how we did with your support request. All
 						feedback is appreciated to help us improve our offerting!
 					</p>
-					<form>
+					<form id="rating__form">
 						<section class="rating__score-buttons">
 							<input
 								type="radio"
@@ -55,6 +55,7 @@
 								id="rating-score-3"
 								name="rating-score"
 								value="3"
+								checked
 							/>
 							<label class="rating__score-button" for="rating-score-3"
 								>3
@@ -80,7 +81,9 @@
 								>5
 							</label>
 						</section>
-						<button type="submit" class="rating__submit-button">SUBMIT</button>
+						<button type="submit" class="rating__submit-button js-button">
+							SUBMIT
+						</button>
 					</form>
 				</section>
 				<section class="rating__thank-you-state" style="display: none">
@@ -88,7 +91,7 @@
 						<img src="images/thank-you.svg" alt="thank you" />
 					</section>
 					<p class="rating__alert">
-						You selected <span class="rating__rating-value">4</span> out of 5
+						You selected <span class="rating__score-value">4</span> out of 5
 					</p>
 					<h2 class="rating__title">Thank you!</h2>
 					<p>
@@ -98,5 +101,21 @@
 				</section>
 			</section>
 		</main>
+		<script>
+			document
+				.querySelector('#rating__form')
+				.addEventListener('submit', (e) => {
+					e.preventDefault();
+					document.querySelector('.rating__submiting-state').style.display =
+						'none';
+					document.querySelector('.rating__thank-you-state').style.display =
+						'block';
+					const ratingScore = document.querySelector(
+						"input[type='radio'][name='rating-score']:checked"
+					).value;
+					document.querySelector('.rating__score-value').innerHTML =
+						ratingScore;
+				});
+		</script>
 	</body>
 </html>
